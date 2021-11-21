@@ -225,6 +225,10 @@ p {
   border-radius: 10px;
   border: 1px solid rgba(75, 73, 73, 0.18);
 }
+.weatherclass{ 
+  border-bottom: 3px solid rgba(105, 100, 100, 0.18); 
+   
+}
 
 
 .entry-actions-container {

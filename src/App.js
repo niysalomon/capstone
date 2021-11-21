@@ -13,7 +13,9 @@ function App() {
       
       <header>
         <Error />
+        <div className="weatherclass">
         <Weather />
+        </div>
       </header>
       <aside className="left-wallpaper-control wallpaper-control">
         <BackgroundImageLeftControl />
