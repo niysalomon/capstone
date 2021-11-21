@@ -32,10 +32,5 @@ export const backgroundImageSlice = createSlice({
     }
   }
 });
-
-export const {
-  switchToNextBackgroundImage,
-  switchToPreviousBackgroundImage
-} = backgroundImageSlice.actions;
-
+export const {  switchToNextBackgroundImage,  switchToPreviousBackgroundImage} = backgroundImageSlice.actions;
 export default backgroundImageSlice.reducer;

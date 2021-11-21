@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { removeEntry, toggleEntryDone } from "../journalSlice";
+import { removeEntry, toggleEntryDone } from "../JSlice";
 import Confetti from "react-dom-confetti";
 
 const JournalEntry = ({ children, id, isDone }) => {

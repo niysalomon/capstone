@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getBackgroundImage } from "../backgroundImage/backgroundImageSlice";
+import { getBackgroundImage } from "../Image/ISlice";
 import { getQuote } from "../quote/quoteSlice";
 import { getWeather } from "../weather/weatherSlice";
 
@@ -17,11 +17,11 @@ export const errorSlice = createSlice({
   },
   extraReducers: {
     [getBackgroundImage.rejected]: (state) => {
-      state.errorMessage = "Getting image failed.";
+      state.errorMessage = "Sorry no image.";
       state.retryHandler = getBackgroundImage;
     },
     [getQuote.rejected]: (state) => {
-      state.errorMessage = "Getting the quote failed.";
+      state.errorMessage = "sorry no quote.";
       state.retryHandler = getQuote;
     },
     [getWeather.rejected]: (state) => {
@@ -30,7 +30,5 @@ export const errorSlice = createSlice({
     }
   }
 });
-
 export const { clearErrorMessage } = errorSlice.actions;
-
 export default errorSlice.reducer;

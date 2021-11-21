@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import JournalEntries from "./components/JournalEntries";
-import { addJournalEntry } from "./journalSlice";
+import { addJournalEntry } from "./JSlice"
 
 const Journal = () => {
   const [newJournalEntry, setNewJournalEntry] = useState("");
@@ -18,24 +18,14 @@ const Journal = () => {
   };
   return (
     <> 
-      <div id="journal" className="surface">
-        <h2>SAY SOMETHING!</h2>
-
+      <div id="journal" className="surface"> 
         <form onSubmit={onFormSubmit}>
-          <input
-            type="text"
-            className="journal-input" placeholder="Type here.........."
-            value={newJournalEntry}
-            onChange={(e) => {
-              setNewJournalEntry(e.target.value);
-            }}
-            aria-label="New journal entry"
-          />
+          <input  type="text" className="journal-input" placeholder="Type here.........."
+            value={newJournalEntry}  onChange={(e) => {setNewJournalEntry(e.target.value);}}  aria-label="New journal entry"/>
         </form>
       </div>
       <JournalEntries entries={entries} />
     </>
   );
 };
-
 export default Journal;

@@ -11,12 +11,7 @@ const JournalEntries = ({ entries }) => {
     <div className="surface">
       <ul className="entries-list">
         {entries.map(({ text, isDone }, index) => (
-          <li
-            key={text}
-            className={`${getEntryColor(index)} surface-styles ${
-              isDone ? "entry-done" : ""
-            }`}
-          >
+          <li key={text}  className={`${getEntryColor(index)} surface-styles ${ isDone ? "entry-done" : ""}`} >
             <JournalEntry id={index} isDone={isDone}>
               {text}
             </JournalEntry>
